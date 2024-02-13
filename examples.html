@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; CDTools 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CDTools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction to CDTools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inspect-dataset">Inspect Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-ptycho">Simple Ptycho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gold-balls-ptycho">Gold Balls Ptycho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mit-bnl-logo">MIT BNL Logo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#specular-ptycho">Specular Ptycho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ensemble-reconstruction">Ensemble Reconstruction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ensemble-analysis">Ensemble Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indices_tables.html">Indices and tables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CDTools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h1>
+<p>Included with the repository are a number of example scripts that demonstrate how various aspects of CDTools work. It is recommended to read through at least a few of them before continuing to the tutorial, to get a feel for how the ptychography scripts work.</p>
+<section id="inspect-dataset">
+<h2>Inspect Dataset<a class="headerlink" href="#inspect-dataset" title="Permalink to this heading">¶</a></h2>
+<p>The most important thing to be able to do is look at the raw data and confirm that it looks like you expect, hasn’t been corrupted, etc. This script demonstrates how to load and look at your data, if it’s stored as a compliant .cxi file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># First, we load an example dataset from a .cxi file</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;example_data/AuBalls_700ms_30nmStep_3_6SS_filter.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># And we take a look at the data</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">inspect</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>First, data is read into a dataset object. The dataset object knows how to generate a set of plots describing the basic information (diffraction patterns and nanomaps), which can be generated by running <code class="code docutils literal notranslate"><span class="pre">dataset.inspect</span></code>.</p>
+</section>
+<section id="simple-ptycho">
+<h2>Simple Ptycho<a class="headerlink" href="#simple-ptycho" title="Permalink to this heading">¶</a></h2>
+<p>This script runs a ptychography reconstruction using the SimplePtycho model. This model implements a straightforward transmission ptychography geometry, with no position refinement, incoherent modes, or other doodads (only a background model).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># First, we load an example dataset from a .cxi file</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;example_data/lab_ptycho_data.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># Next, we create a ptychography model from the dataset</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">SimplePtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># Now, we run a short reconstruction from the dataset!</span>
+<span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+
+<span class="c1"># Finally, we plot the results</span>
+<span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Because this script only runs ten iterations, the quality of the reconstruction is relatively poor - however, on this particular dataset, running 75 or so iterations will lead to a surprisingly good reconstruction. On other datasets, however, it will often fail to converge, even in some cases where there is little error in the data.</p>
+<p>When reading this script, note the basic workflow. After the data is loaded, a model is created to match the geometry stored in the dataset, with a default initialization for all the parameters. Next, a reconstruction is run (and the progress reported out). Finally, the finished reconstruction is plotted.</p>
+</section>
+<section id="gold-balls-ptycho">
+<h2>Gold Balls Ptycho<a class="headerlink" href="#gold-balls-ptycho" title="Permalink to this heading">¶</a></h2>
+<p>This script uses the FancyPtycho model to perform a reconstruction from the classic <a class="reference external" href="http://www.cxidb.org/id-65.html">gold balls</a> dataset. The FancyPtycho model is the workhorse model for 2D Ptychographic reconstructions, and has the option to enable correction for a variety of potential sources of error.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">io</span>
+
+<span class="c1"># First, we load an example dataset from a .cxi file</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;example_data/AuBalls_700ms_30nmStep_3_6SS_filter.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># Next, we create a ptychography model from the dataset</span>
+<span class="c1"># Note that we explicitly ask for two incoherent probe modes</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">FancyPtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">n_modes</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Let&#39;s do this reconstruction on the GPU, shall we? </span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">get_as</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+<span class="c1"># Now, we run a short reconstruction from the dataset</span>
+<span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">schedule</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># And we liveplot the updates to the model as they happen</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># This orthogonalizes the incoherent probe modes</span>
+<span class="n">model</span><span class="o">.</span><span class="n">tidy_probes</span><span class="p">()</span>
+
+<span class="c1"># And we save out the results as a .mat file</span>
+<span class="n">io</span><span class="o">.</span><span class="n">savemat</span><span class="p">(</span><span class="s1">&#39;example_reconstructions/gold_balls.mat&#39;</span><span class="p">,</span>
+           <span class="n">model</span><span class="o">.</span><span class="n">save_results</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span>
+
+<span class="c1"># Finally, we plot the results</span>
+<span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>A number of things are changed about this script. The first difference is the section where we transfer the data and the model to the GPU. This is an important step if we would like to get a reconstruction anytime soon!</p>
+<p>Next, note that we can liveplot the results by calling <code class="code docutils literal notranslate"><span class="pre">model.inspect</span></code> within the reconstruction loop. In fact, we could put any code we wanted here to look at the state of the model, and it would be executed after each epoch.</p>
+<p>Finally, note that we take the time to save the results of this reconstruction. This is handled by pickling the dictionary produced by <code class="code docutils literal notranslate"><span class="pre">model.save_results</span></code>, which contains all the parameters which were reconstructed by the model.</p>
+<p>There are a number of things going on behind the scenes as well, just because we decided to use the FancyPtycho model. This reconstruction, in addition to using two incoherently mixing modes, is also performing position annealing and reconstructing any instabilities in the probe flux that might have occured.</p>
+</section>
+<section id="mit-bnl-logo">
+<h2>MIT BNL Logo<a class="headerlink" href="#mit-bnl-logo" title="Permalink to this heading">¶</a></h2>
+<p>Next, we look at an example showing a more involved reconstruction from a dataset that has some serious errors in it. This is a dataset we collected at the CSX beamline of NSLS-II in 2016 from a target that said “MIT BNL” on it, using a defocused zone plate.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="c1"># This file is too large to be distributed via Github.</span>
+<span class="c1"># Please contact Abe Levitan (alevitan@mit) if you would like access</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;79511_p.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># In this dataset, the edges of the patterns are masked off anyway</span>
+<span class="c1"># We can easily just remove this data instead of leaving it to float.</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">patterns</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">patterns</span><span class="p">[:,</span><span class="mi">70</span><span class="p">:</span><span class="o">-</span><span class="mi">70</span><span class="p">,</span><span class="mi">70</span><span class="p">:</span><span class="o">-</span><span class="mi">70</span><span class="p">]</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask</span><span class="p">[</span><span class="mi">70</span><span class="p">:</span><span class="o">-</span><span class="mi">70</span><span class="p">,</span><span class="mi">70</span><span class="p">:</span><span class="o">-</span><span class="mi">70</span><span class="p">]</span>
+
+<span class="c1"># This model definition includes lots of tweaks, described below.</span>
+<span class="c1">#</span>
+<span class="c1"># randomize_ang defines the initial random phase noise&#39;s extent</span>
+<span class="c1"># translations_scale defines how aggressive the position reconstruction is</span>
+<span class="c1"># n_modes is the number of incoherent modes</span>
+<span class="c1"># propagation_distance is the distance to propagate from the SHARP-style guess of the probe&#39;s focal spot (in this case, the value comes from knowledge of the experimental geometry).</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">FancyPtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span>
+                                                <span class="n">translation_scale</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+                                                <span class="n">n_modes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                                <span class="n">propagation_distance</span><span class="o">=</span><span class="mf">73e-6</span><span class="p">)</span>
+
+<span class="c1"># Move to the GPU</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">get_as</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># We turn off position reconstruction for the first phase</span>
+<span class="n">model</span><span class="o">.</span><span class="n">translation_offsets</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+
+<span class="c1"># And we turn it on for the second phase</span>
+<span class="n">model</span><span class="o">.</span><span class="n">translation_offsets</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+    
+<span class="c1"># The third phase lowers the rate further</span>
+<span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.0005</span><span class="p">):</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+
+    
+<span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The first new thing that pops out at us is the choice to remove part of the diffraction patterns stored in the dataset. In this case, that data is noisy, and in any case, it’s masked off with the mask stored in the .cxi file. We can simply edit all the patterns like we would any other pytorch or numpy array, taking care to crop the mask as well to match.</p>
+<p>The next thing we note is that a few more options are being taken advantage of during the model construction. First of all, we introduce the <code class="code docutils literal notranslate"><span class="pre">translation_scale</span></code> option, which sets the aggressiveness of the position reconstruction. A small number like 1 (the default) is often too mild when there are large errors, whereas numbers above 10 are often too agressive to lead to convergence.</p>
+<p>In this case, the <code class="code docutils literal notranslate"><span class="pre">propagation_distance</span></code> option tells us how far to propagate the naive initial guess of the probe. This data was taken from a very defocused zone plate, which is a classic difficult-to-reconstruct probe. The standard probe initialization, however, is generally quite good at generating a good guess of the focal point of any zone-plate-like optics. This option lets us start with a guess of that probe, which has already been propagated from it’s focal point by a known distance.</p>
+<p>Next, note that we can start to play a bit with the reconstruction procedure in response to the kinds of error that exist in the data. In this case, we actually perform three rounds of reconstruction, in serial, with different parameters! First, we we turn off the position reconstruction, and run the reconstruction with an explicitly chosen batch size which was found to work well with this dataset. Next, we turn position reconstruction back on, and continue the reconstruction. Finally, we improve the reconstruction quality by running ten iterations at a smaller learning rate (the default is set to a sensible 0.005).</p>
+</section>
+<section id="specular-ptycho">
+<h2>Specular Ptycho<a class="headerlink" href="#specular-ptycho" title="Permalink to this heading">¶</a></h2>
+<p>This file demonstrates a reconstruction from an experiment in the specular reflection geometry.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># This file is too large to be distributed via Github.</span>
+<span class="c1"># Please contact Abe Levitan (alevitan@mit) if you would like access</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/media/Data Bank/CSX_10_18/Processed_CXIs/110531_p.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+
+<span class="c1"># This model definition includes lots of tweaks, described below.</span>
+<span class="c1">#</span>
+<span class="c1"># randomize_ang defines the initial random phase noise&#39;s extent</span>
+<span class="c1"># translations_scale defines how aggressive the position reconstruction is</span>
+<span class="c1"># scattering_mode overrides any sample normal information stored in the .cxi file</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">FancyPtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span>
+                                                <span class="n">randomize_ang</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span>
+                                                <span class="n">translation_scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                                <span class="n">scattering_mode</span><span class="o">=</span><span class="s1">&#39;reflection&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Move to the GPU</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">get_as</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Run the reconstruction</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">loss</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">loss</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+
+<span class="n">model</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compare</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>While the reconstruction itself is simple this time, a few new parameters have been set in the model definition. First, the <code class="code docutils literal notranslate"><span class="pre">randomize_ang</span></code> parameter was set. This seeds the object with phase noise spanning a given angular range, rather than a constant. Second, the <code class="code docutils literal notranslate"><span class="pre">scattering_mode</span></code> parameter is set. When set, it will override any information in the .cxi file about the sample orientation, and define the orientation based on the detector geometry.</p>
+<p>In this case, the ‘reflection’ geometry knows to set the sample normal parallel to the scattering vector defined by an outgoing ray which intersects the detector at a perpendicular, and an incoming ray along the positive z-direction (as defined in the cxi specification). The other options, ‘transmision’, assumes that the surface normal of your sample is parallel to the incoming light ray. If this is left unset, it will use any information stored in the .cxi file, and will default to a transmission geometry if no data exists.</p>
+</section>
+<section id="ensemble-reconstruction">
+<h2>Ensemble Reconstruction<a class="headerlink" href="#ensemble-reconstruction" title="Permalink to this heading">¶</a></h2>
+<p>One important check when working with ptychography is performing multiple independently seeded reconstructions from the same data, to understand to what extent they converge to the same solution. This script demonstrates how to run an ensemble of reconstructions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cdtools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">io</span>
+
+<span class="c1"># Load the data</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;example_data/AuBalls_700ms_30nmStep_3_6SS_filter.cxi&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting Reconstruction&#39;</span><span class="p">,</span> <span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;of&#39;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    
+    <span class="c1"># Create a new model each time</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">cdtools</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">FancyPtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span><span class="n">n_modes</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                                                    <span class="n">randomize_ang</span><span class="o">=</span><span class="mf">0.1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+
+    <span class="c1"># Work on the GPU</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">get_as</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Run the reconstruction</span>
+    <span class="k">for</span> <span class="n">loss</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">Adam_optimize</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Print a summary that won&#39;t be overwritten by the next line</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished:&#39;</span><span class="p">,</span><span class="n">model</span><span class="o">.</span><span class="n">report</span><span class="p">())</span>
+    
+    <span class="c1"># And add the results to the ensemble dictionary</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">save_results</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span>
+
+<span class="c1"># This converts from a list of dictionaries to a dictionary of lists</span>
+<span class="c1"># It&#39;s safe to assume that all elements have the same set of keys</span>
+<span class="c1"># After this, e.g. dataset[&#39;probe&#39;] will return a list of all probes.</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">element</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span>
+           <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;probe&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># Save out the ensemble</span>
+<span class="n">io</span><span class="o">.</span><span class="n">savemat</span><span class="p">(</span><span class="s1">&#39;example_reconstructions/gold_balls_ensemble.mat&#39;</span><span class="p">,</span> <span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that essentially all that’s different here is that the reconstructions are performed within a loop, with each reconstruction added to a list. Importantly, the <code class="code docutils literal notranslate"><span class="pre">randomize_ang</span></code> parameter is set, so that the reconstructions are seeded with a different pattern of noise.</p>
+</section>
+<section id="ensemble-analysis">
+<h2>Ensemble Analysis<a class="headerlink" href="#ensemble-analysis" title="Permalink to this heading">¶</a></h2>
+<p>This file inspects the results from the ensemble reconstruction</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">io</span>
+
+<span class="kn">from</span> <span class="nn">cdtools.tools</span> <span class="kn">import</span> <span class="n">plotting</span>
+<span class="kn">from</span> <span class="nn">cdtools.tools</span> <span class="kn">import</span> <span class="n">analysis</span>
+
+
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="s1">&#39;example_reconstructions/gold_balls_ensemble.mat&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Now we synthesize an average reconstruction</span>
+<span class="n">synth_probe</span><span class="p">,</span> <span class="n">synth_obj</span><span class="p">,</span> <span class="n">aligned_objs</span> <span class="o">=</span> <span class="n">analysis</span><span class="o">.</span><span class="n">synthesize_reconstructions</span><span class="p">(</span>
+    <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;probe&#39;</span><span class="p">],</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;obj&#39;</span><span class="p">])</span>
+
+<span class="c1"># And then we calculate the consistency PRTF from this</span>
+<span class="n">freqs</span><span class="p">,</span> <span class="n">prtf</span> <span class="o">=</span> <span class="n">analysis</span><span class="o">.</span><span class="n">calc_consistency_prtf</span><span class="p">(</span><span class="n">synth_obj</span><span class="p">,</span> <span class="n">aligned_objs</span><span class="p">,</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Plot the first mode in detail</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_phase</span><span class="p">(</span><span class="n">synth_probe</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_amplitude</span><span class="p">(</span><span class="n">synth_probe</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_colorized</span><span class="p">(</span><span class="n">synth_probe</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Just plot the colorized version of the subdominant modes</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_colorized</span><span class="p">(</span><span class="n">synth_probe</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_colorized</span><span class="p">(</span><span class="n">synth_probe</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># And now we plot the object</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_amplitude</span><span class="p">(</span><span class="n">synth_obj</span><span class="p">,</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_colorized</span><span class="p">(</span><span class="n">synth_obj</span><span class="p">,</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plotting</span><span class="o">.</span><span class="n">plot_phase</span><span class="p">(</span><span class="n">synth_obj</span><span class="p">,</span><span class="n">basis</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;basis&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    
+<span class="c1"># Finally, plot the consistency PRTF</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="o">*</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">prtf</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Spatial Frequency (cycles/um)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Consistency Based PRTF&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>After loading the results and manipulating them a bit using regular python, two analysis functions from CDTools are used to glean information from the ensemble.</p>
+<p>First is <code class="code docutils literal notranslate"><span class="pre">analysis.synthesize_reconstructions</span></code>. This function takes a stack of reconstructed probes and objects, corrects each reconstruction to account for the various ambiguities (phase ramps, translation offsets, etc.), and sums them into a single synthesized probe and object. Once the reconstructions are synthesized, this final synthesized probe and object can be plotted</p>
+<p>Second is <code class="code docutils literal notranslate"><span class="pre">analysis.calc_consistency_prtf</span></code>. This function compares the power into various spatial frequencies between a stack of individual reconstructions and a synthesized reconstruction, in analogy with the phase retrieval transfer function. It then outputs a curve analogous to the PRTF, that shows at what spatial frequencies the reconstructions have converged consistently. This result is then plotted as well.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2021, Abraham Levitan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
