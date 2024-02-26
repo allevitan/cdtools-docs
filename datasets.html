@@ -1,169 +1,118 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Datasets &mdash; CDTools 0.1.0 documentation</title>
-  
-
-  
-  
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datasets &mdash; CDTools 0.2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=938c9ccc"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Models" href="models.html" />
     <link rel="prev" title="General Reference" href="general.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> CDTools
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            CDTools
           </a>
-
-          
-            
-            
               <div class="version">
-                0.1
+                0.2
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction to CDTools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="general.html">General Reference</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cdtools.datasets.CDataset"><code class="docutils literal notranslate"><span class="pre">CDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset._load"><code class="docutils literal notranslate"><span class="pre">CDataset._load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset.from_cxi"><code class="docutils literal notranslate"><span class="pre">CDataset.from_cxi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset.get_as"><code class="docutils literal notranslate"><span class="pre">CDataset.get_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset.inspect"><code class="docutils literal notranslate"><span class="pre">CDataset.inspect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset.to"><code class="docutils literal notranslate"><span class="pre">CDataset.to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.CDataset.to_cxi"><code class="docutils literal notranslate"><span class="pre">CDataset.to_cxi()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset"><code class="docutils literal notranslate"><span class="pre">PolarizationSweptPtycho2DDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset._load"><code class="docutils literal notranslate"><span class="pre">PolarizationSweptPtycho2DDataset._load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.from_cxi"><code class="docutils literal notranslate"><span class="pre">PolarizationSweptPtycho2DDataset.from_cxi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.to"><code class="docutils literal notranslate"><span class="pre">PolarizationSweptPtycho2DDataset.to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.to_cxi"><code class="docutils literal notranslate"><span class="pre">PolarizationSweptPtycho2DDataset.to_cxi()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset._load"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset._load()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.from_cxi"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.from_cxi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.inspect"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.inspect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.pad"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.pad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.split"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.split()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.to"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset.to_cxi"><code class="docutils literal notranslate"><span class="pre">Ptycho2DDataset.to_cxi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/index.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="indices_tables.html">Indices and tables</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">CDTools</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Datasets</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Datasets</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/datasets.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="module-cdtools.datasets">
-<span id="datasets"></span><h1>Datasets<a class="headerlink" href="#module-cdtools.datasets" title="Permalink to this heading">¶</a></h1>
+<span id="datasets"></span><h1>Datasets<a class="headerlink" href="#module-cdtools.datasets" title="Link to this heading"></a></h1>
 <p>This module contains all the datasets for interacting with ptychography data</p>
 <p>All the access to data from standard ptychography and CDI experiments is
 coordinated through the various datasets defined in this module. They make use
@@ -190,7 +139,7 @@ through the tutorial section on defining a new CDI dataset before
 attempting to do so</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">CDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detector_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">CDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detector_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></p>
 <p>The base dataset class which all other datasets subclass</p>
 <p>Subclasses torch.utils.data.Dataset</p>
@@ -218,7 +167,7 @@ detector background</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset._load">
-<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset._load" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset._load" title="Link to this definition"></a></dt>
 <dd><p>Internal function to load data</p>
 <p>In all subclasses of CDataset, a _load function should be defined.
 This function is used internally by the global __getitem__ function
@@ -236,7 +185,7 @@ function is defined as returing a NotImplemented Error</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset.from_cxi">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.from_cxi" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.from_cxi" title="Link to this definition"></a></dt>
 <dd><p>Generates a new CDataset from a .cxi file directly</p>
 <p>This is the most commonly used constructor for CDatasets and
 subclasses thereof. It populates the dataset using the information
@@ -257,7 +206,7 @@ or a filename or pathlib object pointing to the file</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset.get_as">
-<span class="sig-name descname"><span class="pre">get_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.get_as" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.get_as" title="Link to this definition"></a></dt>
 <dd><p>Sets the dataset to return data on the given device and dtype</p>
 <p>Oftentimes there isn’t room to store an entire dataset on a GPU,
 but it is still worth running the calculation on the GPU even with
@@ -275,7 +224,7 @@ any reconstructions).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset.inspect">
-<span class="sig-name descname"><span class="pre">inspect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.inspect" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">inspect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.inspect" title="Link to this definition"></a></dt>
 <dd><p>The prototype for the inspect function</p>
 <p>In all subclasses of CDataset, an inspect function should be
 defined which opens a tool that shows the data in a natural
@@ -285,7 +234,7 @@ data is stored, so this is defined to raise a NotImplementedError</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset.to">
-<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.to" title="Link to this definition"></a></dt>
 <dd><p>Sends the relevant data to the given device and dtype</p>
 <p>This function sends the stored mask and background to the
 specified device and dtype</p>
@@ -294,7 +243,7 @@ specified device and dtype</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.CDataset.to_cxi">
-<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.to_cxi" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.CDataset.to_cxi" title="Link to this definition"></a></dt>
 <dd><p>Saves out a CDataset as a .cxi file</p>
 <p>This function saves all the compatible information in a CDataset
 object into a .cxi file. This is useful for saving out modified
@@ -309,27 +258,31 @@ or simulated datasets</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">PolarizedPtycho2DDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarizer_angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analyzer_angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cdtools.datasets.PolarizationSweptPtycho2DDataset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">PolarizationSweptPtycho2DDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarization_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarization_states</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cdtools.datasets.Ptycho2DDataset" title="cdtools.datasets.ptycho_2d_dataset.Ptycho2DDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ptycho2DDataset</span></code></a></p>
 <p>The standard dataset for a 2D ptychography scan</p>
-<p>Subclasses datasets.Ptycho2DDataset</p>
+<p>Subclasses datasets.CDataset</p>
 <p>This class loads and saves 2D ptychography scan data from .cxi files.
 It should save and load files compatible with most reconstruction
 programs, although it is only tested against SHARP.</p>
 <p>The __init__ function allows construction from python objects.</p>
 <p>The detector_geometry dictionary is defined to have the
 entries defined by the outputs of data.get_detector_geometry.</p>
+<p>Note that the created dataset object will not copy the data in the
+patterns parameter in order to avoid doubling the memory requiement
+for large datasets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>translations</strong> (<em>array</em><em> (</em><em>nx3 t.tensor when polarized=True</em><em>)</em>) – An nx3 array containing the probe translations at each scan point</p></li>
-<li><p><strong>patterns</strong> (<em>array</em>) – An nxmxl array containing the full stack of measured diffraction patterns</p></li>
-<li><p><strong>axes</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – <dl class="simple">
-<dt>A</dt><dd><p>of names for the axes of the probe translations</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>translations</strong> (<em>array</em>) – An nx3 array containing the probe translations at each scan point</p></li>
+<li><p><strong>patterns</strong> (<em>array</em>) – An nxmxl array containing the full stack of measured diffraction
+patterns</p></li>
+<li><p><strong>polarization_indices</strong> (<em>array</em><em>(</em><em>int</em><em>)</em>) – A length-n array containing the index of the polarization state
+attached to each pattern</p></li>
+<li><p><strong>polarization_states</strong> (<em>array</em>) – An mx2 array, where m is the number of polarization indices,
+encoding the polarzation state associated with each index</p></li>
+<li><p><strong>axes</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – A list of names for the axes of the probe translations</p></li>
 <li><p><strong>entry_info</strong> (<em>dict</em>) – A dictionary containing the entry_info metadata</p></li>
 <li><p><strong>sample_info</strong> (<em>dict</em>) – A dictionary containing the sample_info metadata</p></li>
 <li><p><strong>wavelength</strong> (<em>float</em>) – The wavelength of light used in the experiment</p></li>
@@ -339,12 +292,13 @@ parameters</p></li>
 for dead</p></li>
 <li><p><strong>background</strong> (<em>array</em>) – An initial guess for the not-previously-subtracted
 detector background</p></li>
+<li><p><strong>intensities</strong> (<em>array</em>) – A list of measured shot-to-shot intensities</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset._load">
-<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset._load" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cdtools.datasets.PolarizationSweptPtycho2DDataset._load">
+<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset._load" title="Link to this definition"></a></dt>
 <dd><p>Internal function to load data</p>
 <p>This function is used internally by the global __getitem__ function
 defined in the base class, which handles moving data around when
@@ -379,11 +333,11 @@ if polarized: inputs = ((phi1, phi2), ind, transl[(phi1, phi2)][ind])</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset.from_cxi">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset.from_cxi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates a new PolarizedPtycho2DDataset from a .cxi file directly</p>
-<p>This generates a new PolarizedPtycho2DDataset from a .cxi file storing
-a 2D ptychography scan.</p>
+<dt class="sig sig-object py" id="cdtools.datasets.PolarizationSweptPtycho2DDataset.from_cxi">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.from_cxi" title="Link to this definition"></a></dt>
+<dd><p>Generates a new PolarizationSweptPtycho2DDataset from a .cxi file</p>
+<p>This generates a new PolarizationSweptPtycho2DDataset from a .cxi file
+storing the 2D ptychography scan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -395,25 +349,14 @@ a 2D ptychography scan.</p>
 <dd class="field-even"><p><strong>dataset</strong> – The constructed dataset object</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#cdtools.datasets.PolarizedPtycho2DDataset" title="cdtools.datasets.PolarizedPtycho2DDataset">PolarizedPtycho2DDataset</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset" title="cdtools.datasets.PolarizationSweptPtycho2DDataset">PolarizationSweptPtycho2DDataset</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset.inspect">
-<span class="sig-name descname"><span class="pre">inspect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logarithmic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'um'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset.inspect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Launches an interactive plot for perusing the data</p>
-<p>This launches an interactive plotting tool in matplotlib that
-shows the spatial map constructed from the integrated intensity
-at each position on the left, next to a panel on the right that
-can display a base-10 log plot of the detector readout at each
-position.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset.to">
-<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset.to" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="cdtools.datasets.PolarizationSweptPtycho2DDataset.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.to" title="Link to this definition"></a></dt>
 <dd><p>Sends the relevant data to the given device and dtype</p>
 <p>This function sends the stored translations, patterns,
 mask and background to the specified device and dtype</p>
@@ -421,12 +364,12 @@ mask and background to the specified device and dtype</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cdtools.datasets.PolarizedPtycho2DDataset.to_cxi">
-<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizedPtycho2DDataset.to_cxi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Saves out a PolarizedPtycho2DDataset as a .cxi file</p>
+<dt class="sig sig-object py" id="cdtools.datasets.PolarizationSweptPtycho2DDataset.to_cxi">
+<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.PolarizationSweptPtycho2DDataset.to_cxi" title="Link to this definition"></a></dt>
+<dd><p>Saves out a PolarizationSweptPtycho2DDataset as a .cxi file</p>
 <p>This function saves all the compatible information in a
-PolarizedPtycho2DDataset object into a .cxi file. This saved .cxi file
-should be compatible with any standard .cxi file based
+PolarizationSweptPtycho2DDataset object into a .cxi file. This saved
+.cxi file should be compatible with any standard .cxi file based
 reconstruction tool, such as SHARP.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -439,7 +382,7 @@ reconstruction tool, such as SHARP.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">Ptycho2DDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cdtools.datasets.</span></span><span class="sig-name descname"><span class="pre">Ptycho2DDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">translations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patterns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#cdtools.datasets.CDataset" title="cdtools.datasets.base.CDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDataset</span></code></a></p>
 <p>The standard dataset for a 2D ptychography scan</p>
 <p>Subclasses datasets.CDataset</p>
@@ -473,7 +416,7 @@ detector background</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset._load">
-<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset._load" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset._load" title="Link to this definition"></a></dt>
 <dd><p>Internal function to load data</p>
 <p>This function is used internally by the global __getitem__ function
 defined in the base class, which handles moving data around when
@@ -501,7 +444,7 @@ getting data as GPU tensors.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.from_cxi">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.from_cxi" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut_zeros</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.from_cxi" title="Link to this definition"></a></dt>
 <dd><p>Generates a new Ptycho2DDataset from a .cxi file directly</p>
 <p>This generates a new Ptycho2DDataset from a .cxi file storing
 a 2D ptychography scan.</p>
@@ -523,7 +466,7 @@ a 2D ptychography scan.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.inspect">
-<span class="sig-name descname"><span class="pre">inspect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logarithmic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'um'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.inspect" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">inspect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logarithmic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'um'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.inspect" title="Link to this definition"></a></dt>
 <dd><p>Launches an interactive plot for perusing the data</p>
 <p>This launches an interactive plotting tool in matplotlib that
 shows the spatial map constructed from the integrated intensity
@@ -533,8 +476,41 @@ position.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.pad">
+<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_pad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.pad" title="Link to this definition"></a></dt>
+<dd><p>Pads all the diffraction patterns by a speficied amount</p>
+<p>This is useful for scenarios where the diffraction is strong, even
+near the edge of the detector. In this scenario, the discrete version
+of the ptychography model will alias. Padding the diffraction patterns
+to increase their size and masking off the outer region can account
+for this effect.</p>
+<p>If to_pad is an integer, the patterns will be padded on all sides by
+this value. If it is a tuple of length 2, then the patterns will be
+padded (left/right, top/bottom, left/right). If a tuple of length 4,
+the padding is done as (left, right, top, bottom), following the
+convention for torch.nn.functional.pad</p>
+<p>Any mask and background data which is stored with the dataset will be
+padded along with the diffraction patterns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>to_pad</strong> (<em>int</em><em> or </em><em>tuple</em><em>(</em><em>int</em><em>)</em>) – The number of pixels to pad by.</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – Optional, the fill value to pad with. Default is 0</p></li>
+<li><p><strong>mask</strong> (<em>bool</em>) – Optional, whether to mask off the new pixels. Default is True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.split" title="Link to this definition"></a></dt>
+<dd><p>Splits a dataset into two pseudorandomly selected sub-datasets</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.to">
-<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.to" title="Link to this definition"></a></dt>
 <dd><p>Sends the relevant data to the given device and dtype</p>
 <p>This function sends the stored translations, patterns,
 mask and background to the specified device and dtype</p>
@@ -543,7 +519,7 @@ mask and background to the specified device and dtype</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cdtools.datasets.Ptycho2DDataset.to_cxi">
-<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.to_cxi" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to_cxi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cxi_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.datasets.Ptycho2DDataset.to_cxi" title="Link to this definition"></a></dt>
 <dd><p>Saves out a Ptycho2DDataset as a .cxi file</p>
 <p>This function saves all the compatible information in a
 Ptycho2DDataset object into a .cxi file. This saved .cxi file
@@ -562,51 +538,33 @@ reconstruction tool, such as SHARP.</p>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="models.html" class="btn btn-neutral float-right" title="Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="general.html" class="btn btn-neutral float-left" title="General Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general.html" class="btn btn-neutral float-left" title="General Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.html" class="btn btn-neutral float-right" title="Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019-2021, Abraham Levitan
-
-    </p>
+    <p>&#169; Copyright 2019-2024, Abraham Levitan.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
