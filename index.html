@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Introduction to CDTools &mdash; CDTools 0.2.0 documentation</title>
@@ -16,7 +16,7 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=938c9ccc"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -94,6 +94,9 @@
 <span class="c1"># Load a data file</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">Ptycho2DDataset</span><span class="o">.</span><span class="n">from_cxi</span><span class="p">(</span><span class="s1">&#39;ptycho_data.cxi&#39;</span><span class="p">)</span>
 
+<span class="c1"># Look at the data inside</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">inspect</span><span class="p">()</span>
+
 <span class="c1"># Initialize a model from the data</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">FancyPtycho</span><span class="o">.</span><span class="n">from_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
@@ -111,8 +114,16 @@
 </pre></div>
 </div>
 <p>CDTools makes it simple to load and inspect data stored in .cxi files. Reconstruction models for common geometries are included “out of the box”. For more advanced users, it includes a collection of differentiable functions which can beused to construct new forward models.</p>
-<p>The high-level interface to CDTools - datasets and models - is built on a set oflower-level tools. These include functions for accessing stored data in .cxi files, tools to visualize data and reconstructions, and tools that implement basic operations - such as light propagation - relevant to coherent diffraction. These functions can be used alongside the high-level interface, when needed.</p>
-<p>Enough blabber. If you’re interested, read the docs!</p>
+<p>The high-level interface to CDTools - datasets and models - is built on a set of lower-level tools. These lower level tools include:</p>
+<ul class="simple">
+<li><p>functions for accessing stored data in .cxi files</p></li>
+<li><p>plotting tools to visualize data and reconstructions</p></li>
+<li><p>basic operations, like light propagators, needed for coherent diffraction</p></li>
+<li><p>tools that implement basic operations - such as light propagation - relevant to coherent diffraction.</p></li>
+<li><p>analysis functions for assessing the quality of reconstructions</p></li>
+</ul>
+<p>These functions can be used alongside the high-level interface to make fun and fancy reconstruction scripts for challenging data.</p>
+<p>If you’re interested, read the docs!</p>
 </section>
 
 

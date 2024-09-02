@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Losses &mdash; CDTools 0.2.0 documentation</title>
@@ -16,7 +16,7 @@
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../_static/documentation_options.js?v=938c9ccc"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -62,7 +62,12 @@
 <li class="toctree-l2"><a class="reference internal" href="interactions.html">Interactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagators.html">Propagators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measurements.html">Measurements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Losses</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Losses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.tools.losses.amplitude_mse"><code class="docutils literal notranslate"><span class="pre">amplitude_mse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.tools.losses.intensity_mse"><code class="docutils literal notranslate"><span class="pre">intensity_mse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cdtools.tools.losses.poisson_nll"><code class="docutils literal notranslate"><span class="pre">poisson_nll()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis.html">Analysis</a></li>
 </ul>
@@ -97,6 +102,108 @@
              
   <section id="module-cdtools.tools.losses">
 <span id="losses"></span><h1>Losses<a class="headerlink" href="#module-cdtools.tools.losses" title="Link to this heading"></a></h1>
+<p>Contains various loss functions to be used for optimization</p>
+<p>It exposes three losses, one returning the mean squared amplitude error, one
+that returns the mean squared intensity error, and one that returns the
+maximum likelihood metric for a system with Poisson statistics.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cdtools.tools.losses.amplitude_mse">
+<span class="sig-prename descclassname"><span class="pre">cdtools.tools.losses.</span></span><span class="sig-name descname"><span class="pre">amplitude_mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.tools.losses.amplitude_mse" title="Link to this definition"></a></dt>
+<dd><p>Returns the mean squared error of a simulated dataset’s amplitudes</p>
+<p>Calculates the mean squared error between a given set of
+measured diffraction intensities and a simulated set.</p>
+<p>This function calculates the mean squared error between their
+associated amplitudes. Because this is not well defined for negative
+numbers, make sure that all the intensities are &gt;0 before using this
+loss. Note that this is actually a sum-squared error, because this
+formulation makes it vastly simpler to compare error calculations
+between reconstructions with different minibatch size. I hope to
+find a better way to do this that is more honest with this
+cost function, though.</p>
+<p>It can accept intensity and simulated intensity tensors of any shape
+as long as their shapes match, and the provided mask array can be
+broadcast correctly along them.</p>
+<p>This is empirically the most useful loss function for most cases</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intensities</strong> (<em>torch.Tensor</em>) – A tensor with measured detector values</p></li>
+<li><p><strong>sim_intensities</strong> (<em>torch.Tensor</em>) – A tensor of simulated detector intensities</p></li>
+<li><p><strong>mask</strong> (<em>torch.Tensor</em>) – A mask with ones for pixels to include and zeros for pixels to exclude</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>loss</strong> – A single value for the mean amplitude mse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cdtools.tools.losses.intensity_mse">
+<span class="sig-prename descclassname"><span class="pre">cdtools.tools.losses.</span></span><span class="sig-name descname"><span class="pre">intensity_mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.tools.losses.intensity_mse" title="Link to this definition"></a></dt>
+<dd><p>Returns the mean squared error of a simulated dataset’s intensities</p>
+<p>Calculates the summed mean squared error between a given set of
+diffraction intensities - the measured set of detector intensities -
+and a simulated set of diffraction intensities. This function
+calculates the mean squared error between the intensities.</p>
+<p>It can accept intensity and simulated intensity tensors of any shape
+as long as their shapes match, and the provided mask array can be
+broadcast correctly along them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intensities</strong> (<em>torch.Tensor</em>) – A tensor with measured detector intensities.</p></li>
+<li><p><strong>sim_intensities</strong> (<em>torch.Tensor</em>) – A tensor of simulated detector intensities</p></li>
+<li><p><strong>mask</strong> (<em>torch.Tensor</em>) – A mask with ones for pixels to include and zeros for pixels to exclude</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>loss</strong> – A single value for the mean intensity mse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cdtools.tools.losses.poisson_nll">
+<span class="sig-prename descclassname"><span class="pre">cdtools.tools.losses.</span></span><span class="sig-name descname"><span class="pre">poisson_nll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_intensities</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subtract_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cdtools.tools.losses.poisson_nll" title="Link to this definition"></a></dt>
+<dd><p>Returns the Poisson negative log likelihood for simulated intensities</p>
+<p>Calculates the overall Poisson maximum likelihood metric using
+diffraction intensities - the measured set of detector intensities -
+and a simulated set of intensities. This loss would be appropriate
+for detectors in a single-photon counting mode, with their output
+scaled to number of photons</p>
+<p>Note that this calculation ignores the log(intensities!) term in the
+full expression for Poisson negative log likelihood. This term doesn’t
+change the calculated gradients so isn’t worth taking the time to compute</p>
+<p>It can accept intensity and simulated intensity tensors of any shape
+as long as their shapes match, and the provided mask array can be
+broadcast correctly along them.</p>
+<p>The default value of eps is 1e-6 - a nonzero value here helps avoid
+divergence of the log function near zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>intensities</strong> (<em>torch.Tensor</em>) – A tensor with measured detector intensities.</p></li>
+<li><p><strong>sim_intensities</strong> (<em>torch.Tensor</em>) – A tensor of simulated detector intensities</p></li>
+<li><p><strong>mask</strong> (<em>torch.Tensor</em>) – A mask with ones for pixels to include and zeros for pixels to exclude</p></li>
+<li><p><strong>eps</strong> (<em>float</em>) – Optional, a small number to add to the simulated intensities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>loss</strong> – A single value for the poisson negative log likelihood</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
